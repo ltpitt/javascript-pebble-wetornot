@@ -1,7 +1,7 @@
 # Wet or Not - Pebble Weather App
 
 ## Overview
-Wet or Not is a simple weather application designed for Pebble smartwatches. Utilizing real-time data from (Buienradar)[https://www.buienradar.nl/], it provides accurate rain forecasts tailored to your current location.
+Wet or Not is a simple weather application designed for Pebble smartwatches. Utilizing real-time data from [Buienradar](https://www.buienradar.nl), it provides accurate rain forecasts tailored to your current location.
 
 ## Features
 - **Real-time Rain Forecast**: Stay updated with the latest precipitation predictions.
