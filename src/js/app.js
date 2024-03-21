@@ -119,18 +119,20 @@ function prepareMenuItems(forecasts) {
 var weatherDataPromise = fetchWeather();
 
 setTimeout(function() {
-  weatherDataPromise.then(prepareMenuItems).then(createMenuCard).then(function() { splashScreen.hide(); }).catch(function(error) {
-    console.error('Error fetching weather data: ' + error);
+    weatherDataPromise
+        .then(prepareMenuItems)
+        .then(createMenuCard)
+        .then(function() { splashScreen.hide(); })
+        .catch(function(error) {
+            console.error('Error fetching weather data: ' + error);
+            loadingCard.subtitle(error);
 
-    loadingCard.subtitle(error);
-
-    var errorCard = new UI.Card({
-      title: 'Error',
-      body: error
-    });
-    errorCard.show();
-
-  });
+            var errorCard = new UI.Card({
+                title: 'Error',
+                body: error
+            });
+            errorCard.show();
+        });
 }, 2000);
 
 Pebble.addEventListener('showConfiguration', function() {
