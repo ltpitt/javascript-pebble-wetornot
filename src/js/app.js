@@ -3,7 +3,8 @@ var ajax = require('ajax');
 var Vector2 = require('vector2');
 var Settings = require('settings');
 
-var splashScreen = new UI.Card({ banner: 'images/wetornot_pebble_app_icon.png' });
+
+var splashScreen = new UI.Card({ banner: 'IMAGE_SPLASHSCREEN' });
 splashScreen.show();
 
 var apiKey = Settings.option('apiKey') || '3c4a3037-85e6-4d1e-ad6c-f3f6e4b75f2f';
@@ -56,7 +57,7 @@ function getWeatherDisplayData(precipitation) {
 function createMenuCard(menuItems) {
     var menu = new UI.Menu({
         sections: [{
-            title: 'Wet or not',
+            title: 'Wet or... Not?',
             items: menuItems
         }]
     });
@@ -118,8 +119,7 @@ function prepareMenuItems(forecasts) {
 var weatherDataPromise = fetchWeather();
 
 setTimeout(function() {
-  splashScreen.hide();
-  weatherDataPromise.then(prepareMenuItems).then(createMenuCard).catch(function(error) {
+  weatherDataPromise.then(prepareMenuItems).then(createMenuCard).then(function() { splashScreen.hide(); }).catch(function(error) {
     console.error('Error fetching weather data: ' + error);
 
     loadingCard.subtitle(error);
