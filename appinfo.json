@@ -14,18 +14,18 @@
         "type": "bitmap"
       },
       {
-        "file": "images/logo_splash.png",
-        "name": "IMAGE_LOGO_SPLASH",
-        "type": "bitmap"
-      },
-      {
         "file": "images/tile_splash.png",
         "name": "IMAGE_TILE_SPLASH",
         "type": "bitmap"
       },
       {
-        "file": "images/wetornot_pebble_app_icon.png",
-        "name": "IMAGE_WETORNOT_PEBBLE_APP_ICON",
+        "file": "images/splashscreen.png",
+        "name": "IMAGE_SPLASHSCREEN",
+        "platforms": [
+          "basalt",
+          "chalk",
+          "diorite"
+        ],
         "type": "bitmap"
       },
       {
@@ -68,7 +68,7 @@
   "versionCode": 1,
   "versionLabel": "1.0",
   "watchapp": {
-    "menuIcon": "IMAGE_WETORNOT_PEBBLE_APP_ICON",
+    "menuIcon": "images/wetornot_pebble_app_icon.png",
     "watchface": false
   }
 }
