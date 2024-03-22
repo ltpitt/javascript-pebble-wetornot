@@ -54,6 +54,7 @@ function getWeatherDisplayData(precipitation) {
     return { "description": description, "icon": icon };
 }
 
+
 function createMenuCard(menuItems) {
     var menu = new UI.Menu({
         sections: [{
@@ -133,7 +134,7 @@ setTimeout(function() {
             });
             errorCard.show();
         });
-}, 2000);
+}, 3000);
 
 Pebble.addEventListener('showConfiguration', function() {
     Pebble.openURL('https://davidenastri.it/wetornot');
