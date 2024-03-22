@@ -8,25 +8,37 @@
   "resources": {
     "media": [
       {
+        "file": "images/tile_splash.png",
+        "name": "IMAGE_TILE_SPLASH",
+        "type": "bitmap"
+      },
+      {
         "file": "images/menu_icon.png",
         "menuIcon": true,
         "name": "IMAGE_MENU_ICON",
         "type": "bitmap"
       },
       {
-        "file": "images/tile_splash.png",
-        "name": "IMAGE_TILE_SPLASH",
-        "type": "bitmap"
-      },
-      {
         "file": "images/splashscreen.png",
         "name": "IMAGE_SPLASHSCREEN",
         "platforms": [
-          "aplite",
           "basalt",
           "chalk",
           "diorite"
         ],
+        "type": "bitmap"
+      },
+      {
+        "file": "images/splashscreen_bw.png",
+        "name": "IMAGE_SPLASHSCREEN_BW",
+        "platforms": [
+          "aplite"
+        ],
+        "type": "bitmap"
+      },
+      {
+        "file": "images/no_rain.png",
+        "name": "IMAGE_NO_RAIN",
         "type": "bitmap"
       },
       {
@@ -42,11 +54,6 @@
       {
         "file": "images/heavy_rain.png",
         "name": "IMAGE_HEAVY_RAIN",
-        "type": "bitmap"
-      },
-      {
-        "file": "images/no_rain.png",
-        "name": "IMAGE_NO_RAIN",
         "type": "bitmap"
       },
       {
@@ -69,7 +76,6 @@
   "versionCode": 1,
   "versionLabel": "1.0",
   "watchapp": {
-    "menuIcon": "images/wetornot_pebble_app_icon.png",
     "watchface": false
   }
 }
